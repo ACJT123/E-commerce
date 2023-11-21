@@ -1,0 +1,20 @@
+.nav-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Hide the overflow to clip the pseudo-element */
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px; /* Adjust the height as needed */
+        background-color: #20241B; /* Adjust the color as needed */
+        transition: width 0.3s ease; /* Add a smooth transition effect */
+    }
+
+    &:hover::before {
+        width: 100%; /* Expand the pseudo-element to create the left-to-right effect */
+    }
+}

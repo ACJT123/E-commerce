@@ -1,0 +1,35 @@
+.product-bg {
+    content: " ";
+    background: linear-gradient(
+        to right,
+        rgba(151, 151, 151, 0.14) 0%,
+        rgba(151, 151, 151, 0.14) 50%,
+        #bac0ca24 50%,
+        #bac0ca24 100%
+    );
+    width: 50%;
+    margin-left: auto;
+}
+
+.title-heads {
+    font-size: 50pt;
+    font-weight: 900;
+    color: #fca46e;
+    margin-top: -10px;
+}
+
+.total-payable {
+    font-weight: 900;
+    color: rgba(151, 151, 151, 0.744);
+}
+
+.add-to-cart-btn {
+    background-color: #fca46e;
+    color: white;
+    padding: 10px 15px;
+}
+
+.shopping-cart-icon {
+    background-color: rgba(84, 1, 1, 0.236);
+    padding: 5px;
+}
