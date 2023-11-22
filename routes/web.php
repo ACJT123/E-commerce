@@ -39,4 +39,6 @@ Route::middleware('auth')->group(function () {
 Route::resource('product', ProductController::class)
     ->only(['index', 'store']);
 
+Route::get('/products', [ProductController::class, 'displayAllProducts'])->name('product.displayAllProducts');
+
 require __DIR__.'/auth.php';

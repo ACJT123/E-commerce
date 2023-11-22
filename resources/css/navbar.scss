@@ -1,7 +1,6 @@
 .nav-item {
     cursor: pointer;
     position: relative;
-    overflow: hidden; /* Hide the overflow to clip the pseudo-element */
 
     &::before {
         content: '';
@@ -14,7 +13,21 @@
         transition: width 0.3s ease; /* Add a smooth transition effect */
     }
 
-    &:hover::before {
+    &:hover::before,
+    &.active::before {
         width: 100%; /* Expand the pseudo-element to create the left-to-right effect */
+    }
+}
+
+// Additional style for links inside .nav-item
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Apply the .active class to the current page's .nav-item
+.nav-item.active {
+    &::before {
+        width: 100%;
     }
 }

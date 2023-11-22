@@ -1,0 +1,20 @@
+.productControls {
+    display: flex;
+    justify-content: space-between;
+
+    .buttonGroup {
+        display: flex;
+        gap: 5px;
+
+        .sortBtn, .filterBtn {
+            border: 1px solid #ccc;
+            padding: 0 15px;
+            border-radius: 5px;
+            display: flex;
+
+            &:hover{
+                background-color: rgba(151, 151, 151, 0.052);
+            }
+        }
+    }
+}

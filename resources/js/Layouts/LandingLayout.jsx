@@ -10,7 +10,13 @@ export default function LandingLayout({ children }) {
     return (
         <div>
             <Navbar />
+            <div style={{
+                width: "1100px",
+                margin: "auto"
+            }}>
             {children}
+            </div>
+
         </div>
     );
 }

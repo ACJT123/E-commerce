@@ -14,10 +14,24 @@ class ProductController extends Controller
      */
     public function index()
     {
+
+        $products = Product::all();
+
         return Inertia::render("Products/Index",[
-            
+            'products' => $products
         ]);
     }
+
+    public function displayAllProducts()
+    {
+
+        $products = Product::all();
+
+        return Inertia::render("Products/Products",[
+            'products' => $products
+        ]);
+    }
+
 
     /**
      * Show the form for creating a new resource.

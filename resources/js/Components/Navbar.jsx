@@ -2,38 +2,49 @@ import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
 import "../../css/navbar.scss";
 
 export default function Navbar() {
+    const currentPath = window.location.pathname;
+
     const links = [
         {
             name: "Home",
-            url: "something",
+            url: "/product",
         },
         {
             name: "Products",
-            url: "something",
+            url: "/products",
         },
         {
             name: "Manufacturing",
-            url: "something",
+            url: "/manufacturing",
         },
         {
             name: "Packaging",
-            url: "something",
+            url: "/packaging",
         },
     ];
 
     return (
-        <div className="py-5 flex px-20 font-black justify-between">
+        <div className="py-5 flex px-20 font-black justify-between mb-5">
             <div className="text-2xl">unmeuable</div>
             <ul className="flex space-x-14 items-center h-[100%]">
                 {links.map((link) => (
-                    <li className="nav-item" key={link.name}>
+                    <li
+                        onClick={(ev) => {
+                            ev.preventDefault();
+                            window.location.href = link.url;
+                        }}
+                        className={`nav-item ${
+                            link.url === currentPath ? "active" : ""
+                        }`}
+                        key={link.name}
+                    >
                         {link.name}
                     </li>
                 ))}
             </ul>
             <div className="space-x-5 ">
-                <ShoppingCartOutlined style={{ fontSize: '24px'}} />
-                <UserOutlined style={{ fontSize: '24px' }} />
+                <ShoppingCartOutlined style={{ fontSize: "24px" }} />
+                <UserOutlined style={{ fontSize: "24px" }} />
             </div>
         </div>
     );
